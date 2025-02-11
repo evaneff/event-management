@@ -13,7 +13,7 @@ Route::get('/user', function (Request $request) {
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/events', [EventController::class, 'index']);
-Route::get('/events/{event}', [EventController::class, 'show']);
+Route::get('/events/{event}', [EventController::class, 'show'])->name('events.show');
 
 Route::get('/events/{event}/attendees', [AttendeeController::class, 'index']);
 Route::get('/events/{event}/attendees/{attendee}', [AttendeeController::class, 'show']);
